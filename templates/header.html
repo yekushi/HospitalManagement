@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医生管理</title>
+    <link rel="stylesheet" href="/static/css/header.css" type="text/css" />
+{#    <script src="/static/js/jquery-3.3.1min.js"></script>#}
+    <style>
+        @font-face {
+            font-family: ywj;
+            src: url("../static/font/yuweijian.ttf");
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="header">
+{#        头部#}
+        <div>
+{#            图标#}
+            <img id="img_h" src="/static/images/hospital.png">
+        </div>
+        <div class="wel_h">
+{#            欢迎#}
+            <font>XXX医院欢迎您</font>
+        </div>
+        <div class="search_h bar_h">
+{#            搜索框#}
+            <form action="index.html" method="post">
+                {% csrf_token %}
+                <input type="text" name="sousuo" placeholder="找医生 / 找科室 / 找病症 / 找信息">
+                <button type="submit"></button>
+            </form>
+        </div>
+        <div class="a_h" id="dl01">
+{#            登录框#}
+            <a href="#" onclick="Show();">登录</a>
+            <a href="#" onclick="Show();">注册</a>
+        </div>
+        <div class="a_h hide" id="dl02">
+            <a href="#">欢迎登录!</a>
+        </div>
+        <div id="bg" class="bg hide"></div>
+        <div id="login" class="mypop hide">
+            <form action="" method="post">
+{#                表单#}
+                {% csrf_token %}
+                <label style="font-size: 20px; color: #4a973e; font-weight: bold;">SignUp</label>
+                <br>
+                <label>用户名:</label>
+                <input type="text" name="username" placeholder="Enter your full name">
+                <br>
+                <label>密&nbsp;&nbsp;&nbsp;码:</label>
+                <input type="password" name="password" placeholder="password">
+                <br>
+                <label>类&nbsp;&nbsp;&nbsp;别:</label>
+                <select size="1">
+                    <option selected="selected" style="display: none" value=""></option>
+                    <option name="leibie" value="医生">医生</option>
+                    <option name="leibie" value="病例">病例</option>
+                </select>
+                <br>
+                <button type="submit"  value="登录" onclick="Wel();">登录</button>
+                <button type="reset" value="取消" onclick="Hide();">取消</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function Show(){
+        document.getElementById('login').classList.remove('hide');
+        document.getElementById('bg').classList.remove('hide');
+    }
+     function Hide(){
+        document.getElementById('login').classList.add('hide');
+        document.getElementById('bg').classList.add('hide');
+    }
+    function Wel() {
+        document.getElementById('login').classList.add('hide');
+        document.getElementById('bg').classList.add('hide');
+        alert('欢迎登录！');
+        document.getElementById('dl01').classList.add('hide');
+        {#document.getElementById('dl02').classList.remove('hide');#}
+    }
+</script>
+</html>

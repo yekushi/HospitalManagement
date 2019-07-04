@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医生管理</title>
+    <script src="/static/js/jquery-3.3.1min.js">
+    </script>
+    <script type="text/javascript" src="../static/js/home.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#header').load('header.html');
+            {#$('#nav').load('nav.html');#}
+            $('#content').load('content.html');
+            $('#footer').load('footer.html');
+        })
+    </script>
+    <style>
+        body {
+            margin: 0 auto;
+            font-family: 微软雅黑;
+        }
+    </style>
+
+</head>
+<body>
+<div style="background-color: #f4f6f3;">
+    <div id="header"></div>
+    <div id="nav" style="z-index: 2;">
+        {#            导航栏#}
+        <ul id="ul1">
+            <li><a href='{% url 'home' %}' id="home">首页</a> </li>
+            <li><a href="#" id="survey">医院概况</a>
+                <ul id="submenu">
+                    <li><a href="#" id="introduction">医院介绍</a> </li>
+                    <li><a href="#" id="leader">现任领导</a> </li>
+                    <li><a href="#" id="appearance">院容院貌</a> </li>
+                    <li><a href="#" id="culture">医院文化</a> </li>
+                </ul>
+            </li>
+            <li><a href="#" id="announce">通知公告</a> </li>
+            <li><a href="#" id="service">病友服务</a>
+                <ul id="submenu">
+                    <li><a href="#" id="time">出诊时间</a> </li>
+                    <li><a href="#" id="navigate">院内导航</a> </li>
+                    <li><a href="#" id="knowledge">健康知识</a> </li>
+                    <li><a href="#" id="educate">健康教育</a> </li>
+                </ul>
+            </li>
+            <li><a href="#" id="navi">科室导航</a> </li>
+        </ul>
+    </div>
+    <div id="content">
+    </div>
+    <div id="footer" ></div>
+</div>
+</body>
+<script type="text/javascript">
+    {#点击病友服务#}
+    $('#service').click(function () {
+        $('#content').load('service.html');
+    })
+    {#点击科室导航#}
+    $('#navi').click(function () {
+        $('#content').load('depart.html');
+    })
+</script>
+</html>

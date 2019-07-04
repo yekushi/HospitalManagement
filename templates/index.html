@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<label>恭喜你成功添加医生信息!!</label>
+<tbody>
+{% for doctor in doctors %}
+    <tr><td>{{ doctor.username }}</td>
+        <td>{{ doctor.usersex }}</td></tr>
+{% endfor %}
+{{ count }}
+</tbody>
+<div class="a">欢迎</div>
+</body>
+</html>
