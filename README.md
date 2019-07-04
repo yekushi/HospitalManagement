@@ -1,20 +1,22 @@
 # 关于
-This project is a simple python-web based hospital management system built by django framework.
 这是由django框架搭建的一个简单的基于python-web的医院管理系统。
-* 
-* 
-* 
-*
-*
-# Operating guide
-1、Using installation dependency packages in terminal
+* hospital：应用APP
+* pyweb01：项目的容器
+* manage.py: 一个实用的命令行工具，可让你以各种方式与该 Django 项目进行交互。
+* static：static称为静态文件夹，用于存放CSS, JavaScript, 网站logo等不变的文件。（相对的，把media称为媒体文件夹，用于存放用户上传的图片。）
+* templates：web页面
+* Requirements.txt：项目所依赖的包
+# 使用指南
+1、在终端安装项目依赖包
 * pip install -r Requirements.txt
 
-2、Data Migration 
-* python manage.py makemigration
+2、做数据迁移备份和数据迁移
+* python manage.py makemigrations
 * python manage.py migrate
 
-3、start server
+3、启动django开发服务器
 * python manage.py runserver
 
-4、Input the server's IP and port number in the browser（eg:  127.0.0.1:8000）. If it starts normally, the output is as follows.
+4、在浏览器访问127.0.0.1：8000
+
+注意：项目中如果代码有改动，服务器会自动监测代码的改动并自动重新载入，所以如果你已经启动了服务器则不需手动重启。
