@@ -1,5 +1,11 @@
-# About
+# 关于
 This project is a simple python-web based hospital management system built by django framework.
+这是由django框架搭建的一个简单的基于python-web的医院管理系统。
+* 
+* 
+* 
+*
+*
 # Operating guide
 1、Using installation dependency packages in terminal
 * pip install -r Requirements.txt
