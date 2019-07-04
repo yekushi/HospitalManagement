@@ -10,3 +10,5 @@ This project is a simple python-web based hospital management system built by dj
 
 3、start server
 * python manage.py runserver
+
+4、Input the server's IP and port number in the browser（eg:  127.0.0.1:8000）. If it starts normally, the output is as follows.
