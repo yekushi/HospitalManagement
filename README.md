@@ -7,6 +7,9 @@
 * templates：web页面
 * Requirements.txt：项目所依赖的包
 # 使用指南
+
+前提：需要自行设置mysql用户名及密码
+
 1、在终端安装项目依赖包
 * pip install -r Requirements.txt
 
