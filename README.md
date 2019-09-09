@@ -20,8 +20,10 @@
 4、在浏览器访问127.0.0.1：8000，并访问首页home.html(127.0.0.1:8000/home.html)即可运行简单的django项目，可继续添加功能。
 
 注意：项目中如果代码有改动，服务器会自动监测代码的改动并自动重新载入，所以如果你已经启动了服务器则不需手动重启。
+使用mysql数据库
 如果出现：
 mysqlclient 1.3.13 or newer is required; you have 0.9.3.
 将__init__.py文件中的代码注释掉：
  import pymysql
  pymysql.install_as_MySQLdb()
+直接安装mysqlclient--pip install mysqlclient
